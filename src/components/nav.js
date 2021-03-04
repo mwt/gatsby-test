@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { Container, Navbar, Nav } from "react-bootstrap";
+import { LastWord } from "../buildtime-scripts";
 
 export default function ComponentNav({ children }) {
     return (
@@ -10,7 +11,7 @@ export default function ComponentNav({ children }) {
                     <StaticQuery
                         query={graphql`query HeadingQuery { site { siteMetadata {title}}}`}
                         render={data => (
-                            data.site.siteMetadata.title
+                            LastWord(data.site.siteMetadata.title)
                         )}
                     />
                 </Navbar.Brand></h1>

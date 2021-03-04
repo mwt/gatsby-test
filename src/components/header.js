@@ -1,0 +1,25 @@
+import React from "react";
+import { LastWord } from "../buildtime-scripts";
+
+export default function ComponentNav(props) {
+    return (
+        <header id="top" class="masthead text-center dark-bg d-flex">
+            <video autoplay muted loop id="bg-video" poster="{{ page.video.pre }}/{{ page.video.post }}.jpg">
+                <source src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.webm" type="video/webm" />
+                <source src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.mp4" type="video/mp4" />
+            </video>
+
+            <div class="video-overlay header-text">
+                <div class="caption">
+                    <h6>It doesn't have to be so hard</h6>
+                    <h2>
+                        { LastWord("tutoring from experts") }
+                    </h2>
+                    <div class="scroll-to-section">
+                        <a class="btn btn-primary" href="{{ '/#contact-us' | relative_url }}" role="button">Request Tutoring</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    )
+}

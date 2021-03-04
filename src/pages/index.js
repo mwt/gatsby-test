@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet';
 import '../styles/main.scss';
 
 import ComponentNav from '../components/nav';
+import ComponentHeader from '../components/header';
+import ComponentSubjects from '../components/subjects';
+import ComponentAbout from '../components/about';
 
 export default function Index() {
   const [date, setDate] = useState(null);
@@ -19,7 +22,10 @@ export default function Index() {
       <Helmet>
         <title>Gatsby + Node.js (TypeScript) API</title>
       </Helmet>
-      <ComponentNav></ComponentNav>
+      <ComponentNav />
+      <ComponentHeader />
+      <ComponentSubjects />
+      <ComponentAbout />
       <h1>Gatsby + Node.js (TypeScript) API</h1>
       <h2>
         Deployed with{' '}
