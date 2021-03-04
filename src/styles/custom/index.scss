@@ -1,0 +1,351 @@
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. global styles
+02. header
+03. banner
+04. features
+05. about
+06. contact
+07. FAQ
+08. footer
+09. responsive
+--------------------------------------------- */
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: $info;
+  color: #fff;
+}
+
+h2,
+h6 {
+  text-transform: uppercase;
+  font-weight: 800;
+  em {
+    font-style: normal;
+    color: $primary;
+  }
+}
+
+p {
+  line-height: 25px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-top: 140px;
+  margin-bottom: 80px;
+  h2 {
+    font-size: 28px;
+    color: $headings-color;
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  img,
+  svg {
+    margin: 20px auto;
+  }
+}
+
+.dark-bg {
+  h2,
+  h6,
+  p {
+    color: $light;
+  }
+}
+
+.btn-primary,
+.btn-primary:hover {
+  color: $light !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ul.social-icons {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0px;
+    }
+    a {
+      color: $headings-color;
+      transition: all 0.3s;
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      fill: currentColor;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+/* 
+---------------------------------------------
+banner
+--------------------------------------------- 
+*/
+
+.masthead {
+  position: relative;
+  .caption {
+    text-align: center;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 25px;
+      font-size: 84px;
+      letter-spacing: 1px;
+    }
+    h6 {
+      margin-top: 0px;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-overlay {
+  position: absolute;
+  background-color: rgba(35, 45, 57, 0.6);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/*
+---------------------------------------------
+features
+---------------------------------------------
+*/
+
+#subjects {
+  margin-bottom: 80px;
+  .item {
+    margin-bottom: 20px;
+  }
+  .name {
+    letter-spacing: 0.25px;
+    font-size: 19px;
+  }
+  .icon {
+    text-align: center;
+    margin {
+      left: auto;
+      right: auto;
+      bottom: 1em;
+    }
+    img,
+    svg {
+      display: block;
+      background-color: $primary;
+      border-radius: 5%;
+      padding: 10px;
+      max-width: 120px;
+    }
+    .text-button {
+      display: block;
+      margin-top: 0.33em;
+      text-transform: uppercase;
+      color: $info;
+      font-weight: 500;
+    }
+  }
+}
+
+/*
+---------------------------------------------
+call to action
+---------------------------------------------
+*/
+
+#call-to-action {
+  padding: 120px 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url("../images/documents-min.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.cta-content {
+  h2 {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 18px;
+    margin: 40px 0px 55px 0px;
+    line-height: normal;
+  }
+}
+
+/* 
+---------------------------------------------
+about
+--------------------------------------------- 
+*/
+
+#about .tutor-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  h4 {
+    font-size: 19px;
+    font-weight: 600;
+    color: $headings-color;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 500;
+    color: $info;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+/* 
+---------------------------------------------
+contact
+--------------------------------------------- 
+*/
+
+#contact-us {
+  margin-top: 140px;
+}
+
+#contact-us .container-fluid .col-lg-6 {
+  padding: 0px;
+}
+
+/* 
+---------------------------------------------
+FAQ
+--------------------------------------------- 
+*/
+#faq {
+  .section-heading {
+    margin-bottom: 30px;
+  }
+}
+
+/* 
+---------------------------------------------
+footer
+--------------------------------------------- 
+*/
+footer {
+  text-align: center;
+  padding: 30px 0px;
+  p {
+    font-size: 13px;
+  }
+}
+
+/* 
+---------------------------------------------
+responsive
+--------------------------------------------- 
+*/
+
+@media (max-width: $bs-lg) {
+  .masthead .caption h2 {
+    font-size: 58px;
+  }
+  #subjects {
+    margin-bottom: 110px;
+  }
+  .icon .text-button {
+    font-size: 16px;
+  }
+  .tutor-item {
+    margin-bottom: 30px;
+  }
+  #contact-us #map {
+    margin-bottom: -7px;
+  }
+  #contact-us .contact-form {
+    padding: 30px;
+  }
+  #contact-us .contact-form #contact {
+    padding: 30px;
+  }
+}
+
+@media (max-width: $tinywidth) {
+  .masthead .caption h2 {
+    font-size: (58px / $tinywidth) * 100vw;
+  }
+  .masthead .caption h6 {
+    font-size: (18px / $tinywidth) * 100vw;
+  }
+  .header-area .navbar .navbar-brand {
+    font-size: (32px / $tinywidth) * 100vw;
+  }
+  #subjects .icon {
+    .text-button {
+      font-size: (14.4px / $tinywidth) * 100vw;
+    }
+    img, svg {
+      max-width: (120px / $tinywidth) * 100vw;
+    }
+  }
+  .cta-content h2 {
+    font-size: (55px / $tinywidth) * 100vw;
+  }
+  .feature-item .right-content a.text-button,
+  .feature-item .right-content p {
+    margin-left: 0;
+  }
+}

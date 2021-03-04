@@ -1,0 +1,47 @@
+/* 
+---------------------------------------------
+variables
+--------------------------------------------- 
+*/
+// colors
+$primary: #00B4FF;
+$info: #DD557E;
+$primary-hover: #47C8FF;
+$headings-color: #1E1E24;
+$body-color: #545464;
+
+// recolor
+$link-color: $primary;
+$link-hover-color: $primary-hover;
+
+// media widths
+$tinywidth: 400px;
+$bs-sm: 576px;
+$bs-md: 768px;
+$bs-lg: 992px;
+$bs-xl: 1200px;
+$bs-xxl: 1400px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $bs-sm,
+  md: $bs-md,
+  lg: $bs-lg,
+  xl: $bs-xl,
+  xxl: $bs-xxl
+);
+
+//Bootstrap options
+$enable-rounded: false;
+$link-decoration: none;
+
+/* 
+---------------------------------------------
+imports
+--------------------------------------------- 
+*/
+@import
+  "bootstrap-custom",
+  "custom/nav",
+  "custom/index",
+  "custom/contact-form";

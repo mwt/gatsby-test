@@ -1,17 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Node.js (TypeScript) API',
+    title: 'Think Tutor',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatsby + Node.js (TypeScript) API',
-        short_name: 'Gatsby + Node.js (TypeScript)',
+        name: 'Think Tutor',
+        short_name: 'Think Tutor',
         start_url: '/',
         icon: 'src/images/gatsby-icon.png',
       },
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`
   ],
 };

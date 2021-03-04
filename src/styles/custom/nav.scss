@@ -1,0 +1,134 @@
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+
+.navbar {
+    background: $light;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1030;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .navbar-brand {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    &,
+    &:hover {
+        color: $headings-color;
+    }
+    em {
+        color: $primary;
+        font-style: normal;
+    }
+}
+
+.navbar .navbar-nav {
+    a {
+        font-weight: 600;
+        color: $dark;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: {
+            left: 11px;
+            right: 11px;
+        }
+    }
+    &::last-child a {
+        padding: {
+            left: 11px;
+            right: 11px;
+        }
+        text-align: center;
+        letter-spacing: 0px;
+        height: auto;
+        &,
+        &:hover {
+            color: $light;
+        }
+    }
+    a.active {
+        color: $primary;
+    }
+    & a:hover {
+        color: $primary-hover;
+    }
+}
+
+.navbar .navbar-toggler {
+    position: relative;
+    width: 32px;
+    height: 40px;
+    z-index: 99;
+    border: none;
+    background: transparent;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    // Menu closed
+    span {
+        top: 16px;
+        &,
+        &:before,
+        &:after {
+            transition: all 0.4s;
+            background-color: #1e1e1e;
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            left: 0;
+        }
+        &:before,
+        &:after {
+            content: "";
+            width: 75%;
+        }
+        &:before {
+            transform-origin: 33% 100%;
+            top: -10px;
+            z-index: 10;
+        }
+        &:after {
+            transform-origin: 33% 0;
+            top: 10px;
+        }
+    }
+    //menu open
+    &[aria-expanded="true"] span {
+        background: transparent;
+        &,
+        &:before,
+        &:after {
+            width: 100%;
+        }
+        &:before {
+            transform: translateY(6px) translateX(1px) rotate(45deg);
+            background-color: #1e1e1e;
+        }
+        &:after {
+            transform: translateY(-6px) translateX(1px) rotate(-45deg);
+            background-color: #1e1e1e;
+        }
+    }
+}
+
+// transparent navbar on desktop
+@media (min-width: $bs-lg) {
+    .navbar-transparent {
+        background: transparent;
+        position: absolute;
+        .navbar-brand,
+        .navbar-brand:hover,
+        .navbar-nav li a {
+            color: $light;
+        }
+    }
+}

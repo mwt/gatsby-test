@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import '../styles/index.css';
+import '../styles/main.scss';
 
-function Index() {
+import ComponentNav from '../components/nav';
+
+export default function Index() {
   const [date, setDate] = useState(null);
   useEffect(() => {
     async function getDate() {
@@ -17,6 +19,7 @@ function Index() {
       <Helmet>
         <title>Gatsby + Node.js (TypeScript) API</title>
       </Helmet>
+      <ComponentNav></ComponentNav>
       <h1>Gatsby + Node.js (TypeScript) API</h1>
       <h2>
         Deployed with{' '}
@@ -52,5 +55,3 @@ function Index() {
     </main>
   );
 }
-
-export default Index;
