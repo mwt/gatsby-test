@@ -14,6 +14,7 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "gatsby-transformer-json": "^3.0.0",
     "sass": "^1.32.8",
     "bootstrap": "^5.0.0-beta2",
     "react": "^17.0.1",

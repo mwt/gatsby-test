@@ -1,9 +1,9 @@
 {
-  "title": "Tutors",
+  "title": "tutors",
   "content": [
      {
         "name": "Maria Fernanda Petri Betto",
-        "image": "tutors/maria.jpg",
+        "image": "../images/tutors/maria.jpg",
         "image_remote": false,
         "title": "Economics PhD Student, Northwestern University",
         "bio": "With 14+ years of teaching experience and an exceptional quantitative background, Maria's successful track record as an instructor comes as no surprise. She tutors in almost all areas of Economics, Mathematics, Statistics and Programming.",
@@ -15,7 +15,7 @@
      },
      {
         "name": "Matthew Thomas",
-        "image": "tutors/matthew.jpg",
+        "image": "../images/tutors/matthew.jpg",
         "image_remote": false,
         "title": "Economics PhD Student, Northwestern University",
         "bio": "Formerly a Math/Econ major at Williams college and now an Economics PhD student at Northwestern University, Matthew's quantitative skills and passion for teaching are unparalleled. He tutors in almost all areas of Economics, Mathematics, Statistics and Programming.",
@@ -27,7 +27,7 @@
      },
      {
         "name": "Joao Monteiro",
-        "image": "tutors/joao.jpg",
+        "image": "../images/tutors/joao.jpg",
         "image_remote": false,
         "title": "Finance PhD Student, Kellogg School of Management",
         "bio": "Joao has over 6 years of teaching experience in Finance, Economics and Business for MBA students. He is currently a PhD student in Finance at Northwestern. He tutors in all courses in Economics, Finance, Business and Statistics.",

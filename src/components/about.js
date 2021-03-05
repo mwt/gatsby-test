@@ -1,8 +1,30 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import Separator from "../images/separator.svg";
-import TutorsYAML from "../data/tutors.json"
 
 export default function ComponentAbout(props) {
+    const data = useStaticQuery(graphql`
+    query {
+        dataJson(title: {eq: "tutors"}) {
+            content {
+              name
+              bio
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              social {
+                email
+                github
+                linkedin
+              }
+            }
+        }
+    }`)
     return (
         <section class="section" id="about">
             <div class="container">
@@ -17,12 +39,12 @@ export default function ComponentAbout(props) {
                     </div>
                 </div>
                 <div class="row">
-                    {TutorsYAML.content.map((tutor, index) => {
+                    {data.dataJson.content.map((tutor, index) => {
                         return (
                             <div class="col-lg-4">
                             <div class="tutor-item">
                                 <div class="image-thumb">
-                                    <img src={ tutor.image } alt={ tutor.name } loading="lazy" />
+                                    <Img fluid={ tutor.image.childImageSharp.fluid } alt={ tutor.name } loading="lazy" />
                                 </div>
                                 <div class="down-content">
                                     <span>{ tutor.title }</span>

@@ -1,6 +1,6 @@
 import React from "react";
 import Separator from "../images/separator.svg";
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 export default function ComponentSubjects(props) {
     const data = useStaticQuery(graphql`
@@ -10,7 +10,9 @@ export default function ComponentSubjects(props) {
                 node {
                     childMarkdownRemark {
                         frontmatter {
-                            icon
+                            icon {
+                                publicURL
+                            }
                             title
                         }
                         fields {
@@ -42,7 +44,7 @@ export default function ComponentSubjects(props) {
                         <div class="col-md-6 item">
                             <div class="row">
                                 <div class="col-5 col-md-6 col-lg-4 col-xxl-3 icon">
-                                    <img src={ edge.node.childMarkdownRemark.frontmatter.icon } alt={ edge.node.childMarkdownRemark.frontmatter.title }></img>
+                                    <img src={ edge.node.childMarkdownRemark.frontmatter.icon.publicURL } alt={ edge.node.childMarkdownRemark.frontmatter.title }></img>
                                     <a href={ edge.node.childMarkdownRemark.fields.slug } class="text-button">Discover More</a>
                                 </div>
                                 <div class="col">

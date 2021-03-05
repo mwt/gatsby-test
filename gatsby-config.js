@@ -19,18 +19,26 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'subjects',
-        path: `${__dirname}/src/data/subjects`
+        name: 'data',
+        path: `${__dirname}/src/data`
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'tutors',
-        path: `${__dirname}/src/images/tutors`
+        name: 'subjects',
+        path: `${__dirname}/src/subjects`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images/`
       }
     }
   ],
