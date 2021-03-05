@@ -24,7 +24,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             node {
               childMarkdownRemark {
                 frontmatter {
-                  icon
                   title
                 }
                 fields {
