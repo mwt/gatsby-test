@@ -5,18 +5,22 @@ import { useStaticQuery, graphql } from "gatsby"
 export default function ComponentSubjects(props) {
     const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
-        edges {
-          node {
-            id
-            excerpt(pruneLength: 250)
-            frontmatter {
-              icon
-              title
+        allFile(filter: {sourceInstanceName: {eq: "subjects"}}) {
+            edges {
+                node {
+                    childMarkdownRemark {
+                        frontmatter {
+                            icon
+                            title
+                        }
+                        fields {
+                            slug
+                        }
+                    excerpt
+                    }
+                }
             }
-          }
         }
-      }
     }`)
     return (
         <section class="section" id="subjects">
@@ -34,16 +38,16 @@ export default function ComponentSubjects(props) {
                     </div>
                 </div>
                 <div class="row subjects">
-                    { data.allMarkdownRemark.edges.map( edge => 
+                    { data.allFile.edges.map( edge => 
                         <div class="col-md-6 item">
                             <div class="row">
                                 <div class="col-5 col-md-6 col-lg-4 col-xxl-3 icon">
-                                    <img src={ edge.node.frontmatter.icon } alt={ edge.node.frontmatter.title }></img>
-                                    <a href="{ subject.url }" class="text-button">Discover More</a>
+                                    <img src={ edge.node.childMarkdownRemark.frontmatter.icon } alt={ edge.node.childMarkdownRemark.frontmatter.title }></img>
+                                    <a href={ edge.node.childMarkdownRemark.fields.slug } class="text-button">Discover More</a>
                                 </div>
                                 <div class="col">
-                                    <h3 class="name">{ edge.node.frontmatter.title }</h3>
-                                    { edge.node.excerpt }
+                                    <h3 class="name">{ edge.node.childMarkdownRemark.frontmatter.title }</h3>
+                                    { edge.node.childMarkdownRemark.excerpt }
                                 </div>
                             </div>
                         </div>

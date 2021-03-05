@@ -1,7 +1,56 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// You can delete this file if you're not using it
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: `${slug}`,
+    })
+  }
+}
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+    const { createPage } = actions
+
+    const subjectTemplate = require.resolve(`./src/templates/subjectTemplate.js`)
+  
+    const result = await graphql(`
+      {
+        allFile(filter: {sourceInstanceName: {eq: "subjects"}}) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
+                  icon
+                  title
+                }
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }
+      }
+    `)
+  
+    // Handle errors
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`)
+      return
+    }
+  
+    result.data.allFile.edges.forEach(({ node }) => {
+      createPage({
+        path: node.childMarkdownRemark.fields.slug,
+        component: subjectTemplate,
+        context: {
+          // additional data can be passed via context
+          slug: node.childMarkdownRemark.fields.slug,
+        },
+      })
+    })
+  }

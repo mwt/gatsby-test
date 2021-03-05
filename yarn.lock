@@ -6126,6 +6126,15 @@ gatsby-graphiql-explorer@^1.0.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+gatsby-image@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-3.0.0.tgz#8c2bf2a335c956decf72bf74a2681742d8db9813"
+  integrity sha512-8Ma2ay4KAs9JR+Y2BiSw3jqiNLAAR4V1ZBC5Pjuf3fEzSONHjhOmZ7hOw8TzYHV32MQWYVFiOiHVHjLQDjH7jw==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    object-fit-images "^3.2.4"
+    prop-types "^15.7.2"
+
 gatsby-legacy-polyfills@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-1.0.0.tgz#42e740b9a62df1a4be022b7519e77a504788f857"
@@ -6403,6 +6412,20 @@ gatsby-transformer-remark@^3.0.0:
     unist-util-remove-position "^1.1.4"
     unist-util-select "^1.5.0"
     unist-util-visit "^1.4.1"
+
+gatsby-transformer-sharp@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-3.0.0.tgz#7fb9806aef08966d2cb610cc6e814639075c931f"
+  integrity sha512-ydkUxYdoELPHcuE2OyTjgS3odcCikn6MPRC//dxPYDrIDMoJ6xPkbetTrshOEdGa2Yf02pp75Fs82PSeC+AXhA==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    bluebird "^3.7.2"
+    common-tags "^1.8.0"
+    fs-extra "^9.1.0"
+    potrace "^2.1.8"
+    probe-image-size "^6.0.0"
+    semver "^7.3.4"
+    sharp "^0.27.0"
 
 gatsby@^3.0.0:
   version "3.0.1"
@@ -9513,6 +9536,11 @@ object-copy@^0.1.0:
     copy-descriptor "^0.1.0"
     define-property "^0.2.5"
     kind-of "^3.0.3"
+
+object-fit-images@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/object-fit-images/-/object-fit-images-3.2.4.tgz#6c299d38fdf207746e5d2d46c2877f6f25d15b52"
+  integrity sha512-G+7LzpYfTfqUyrZlfrou/PLLLAPNC52FTy5y1CBywX+1/FkxIloOyQXBmZ3Zxa2AWO+lMF0JTuvqbr7G5e5CWg==
 
 object-inspect@^1.7.0:
   version "1.8.0"
