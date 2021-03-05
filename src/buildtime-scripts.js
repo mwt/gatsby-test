@@ -5,7 +5,7 @@ export function LastWord(x) {
     const lastword = xarray.pop(); 
     return(
         <>
-            { xarray.join(" ") }
+            { `${xarray.join(" ")} ` }
             <em>
                 { lastword }
             </em>
