@@ -88,8 +88,8 @@ ul.social-icons {
       }
     }
     svg {
-      width: 16px;
-      height: 16px;
+      width: 1.2em;
+      height: 1.2em;
       display: inline-block;
       fill: currentColor;
       vertical-align: text-bottom;
@@ -196,7 +196,7 @@ call to action
 
 #call-to-action {
   padding: 120px 0px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url("../images/documents-min.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/documents-min.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -223,35 +223,24 @@ about
 --------------------------------------------- 
 */
 
-#about .tutor-item {
+#about .card {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  h4 {
+  h5 {
     font-size: 19px;
     font-weight: 600;
     color: $headings-color;
-    letter-spacing: 0.5px;
-    margin-bottom: 18px;
   }
   span {
     font-size: 13px;
     font-weight: 500;
     color: $info;
     display: inline-block;
-    margin-top: 25px;
     margin-bottom: 10px;
   }
   img {
     width: 100%;
-    border-radius: 5px;
-  }
-  p {
-    margin-bottom: 20px;
   }
 }
 

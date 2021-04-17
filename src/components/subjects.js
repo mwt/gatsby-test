@@ -1,5 +1,6 @@
 import React from "react";
 import Separator from "../images/separator.svg";
+import { Row, Col, Container } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby";
 
 export default function ComponentSubjects(props) {
@@ -26,8 +27,8 @@ export default function ComponentSubjects(props) {
     }`)
     return (
         <section class="section" id="subjects">
-            <div class="container">
-                <div class="row">
+            <Container>
+                <Row>
                     <div class="col-lg-6 offset-lg-3">
                         <div class="section-heading">
                             <h2><em>Subjects</em> we tutor</h2>
@@ -38,25 +39,25 @@ export default function ComponentSubjects(props) {
                                 weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
                         </div>
                     </div>
-                </div>
-                <div class="row subjects">
+                </Row>
+                <Row className="subjects">
                     { data.allFile.edges.map( edge => 
-                        <div class="col-md-6 item">
-                            <div class="row">
-                                <div class="col-5 col-md-6 col-lg-4 col-xxl-3 icon">
-                                    <img src={ edge.node.childMarkdownRemark.frontmatter.icon.publicURL } alt={ edge.node.childMarkdownRemark.frontmatter.title }></img>
+                        <Col md={6} className="item">
+                            <Row>
+                                <Col xs={5} md={6} lg={4} xxl={3} className="icon">
+                                    <img class="mx-auto" src={ edge.node.childMarkdownRemark.frontmatter.icon.publicURL } alt={ edge.node.childMarkdownRemark.frontmatter.title }></img>
                                     <a href={ edge.node.childMarkdownRemark.fields.slug } class="text-button">Discover More</a>
-                                </div>
-                                <div class="col">
+                                </Col>
+                                <Col class="col">
                                     <h3 class="name">{ edge.node.childMarkdownRemark.frontmatter.title }</h3>
                                     { edge.node.childMarkdownRemark.excerpt }
-                                </div>
-                            </div>
-                        </div>
+                                </Col>
+                            </Row>
+                        </Col>
                         )
                     }
-                </div>
-            </div>
+                </Row>
+            </Container>
         </section>
     )
 }

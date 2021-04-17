@@ -5,6 +5,7 @@ import '../styles/main.scss';
 import ComponentNav from '../components/nav';
 import ComponentHeader from '../components/header';
 import ComponentSubjects from '../components/subjects';
+import ComponentCTA from '../components/call-to-action';
 import ComponentAbout from '../components/about';
 
 export default function Index() {
@@ -25,6 +26,7 @@ export default function Index() {
       <ComponentNav />
       <ComponentHeader />
       <ComponentSubjects />
+      <ComponentCTA />
       <ComponentAbout />
       <h1>Gatsby + Node.js (TypeScript) API</h1>
       <h2>
