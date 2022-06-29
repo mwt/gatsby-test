@@ -16,7 +16,7 @@ export default function ComponentHeader(props) {
                         { LastWord("tutoring from experts") }
                     </h2>
                     <div class="scroll-to-section">
-                        <a class="btn btn-primary" href="{{ '/#contact-us' | relative_url }}" role="button">Request Tutoring</a>
+                        <a class="btn btn-primary" href="/#contact-us" role="button">Request Tutoring</a>
                     </div>
                 </div>
             </div>

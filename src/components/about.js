@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Row, Col, Container, Card } from "react-bootstrap";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image"
 import Separator from "../images/separator.svg";
 
 export default function ComponentAbout(props) {
@@ -13,11 +13,13 @@ export default function ComponentAbout(props) {
               bio
               image {
                 childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+                    gatsbyImageData(
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                    )
                 }
               }
+              title
               social {
                 email
                 github
@@ -45,7 +47,7 @@ export default function ComponentAbout(props) {
                         <Col>
                             <Card className="h-100">
                                 <div class="image-thumb">
-                                    <Img fluid={ tutor.image.childImageSharp.fluid } alt={ tutor.name } loading="lazy" />
+                                    <GatsbyImage image={ tutor.image.childImageSharp.gatsbyImageData } alt={ tutor.name } loading="lazy" />
                                 </div>
                                 <Card.Body>
                                     <span>{ tutor.title }</span>

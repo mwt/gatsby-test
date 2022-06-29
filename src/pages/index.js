@@ -22,6 +22,7 @@ export default function Index() {
     <main>
       <Helmet>
         <title>Gatsby + Node.js (TypeScript) API</title>
+        <script src="/assets/js/home.js" />
       </Helmet>
       <ComponentNav />
       <ComponentHeader />

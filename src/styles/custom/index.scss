@@ -224,10 +224,9 @@ about
 */
 
 #about .card {
-  background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  h5 {
+  .card-title {
     font-size: 19px;
     font-weight: 600;
     color: $headings-color;
@@ -241,6 +240,7 @@ about
   }
   img {
     width: 100%;
+    border-radius: 5px 5px 0 0;
   }
 }
 
@@ -314,24 +314,24 @@ responsive
 
 @media (max-width: $tinywidth) {
   .masthead .caption h2 {
-    font-size: (58px / $tinywidth) * 100vw;
+    font-size: math.div(58px,$tinywidth) * 100vw;
   }
   .masthead .caption h6 {
-    font-size: (18px / $tinywidth) * 100vw;
+    font-size: math.div(18px,$tinywidth) * 100vw;
   }
   .header-area .navbar .navbar-brand {
-    font-size: (32px / $tinywidth) * 100vw;
+    font-size: math.div(32px,$tinywidth) * 100vw;
   }
   #subjects .icon {
     .text-button {
-      font-size: (14.4px / $tinywidth) * 100vw;
+      font-size: math.div(14.4px,$tinywidth) * 100vw;
     }
     img, svg {
-      max-width: (120px / $tinywidth) * 100vw;
+      max-width: math.div(120px,$tinywidth) * 100vw;
     }
   }
   .cta-content h2 {
-    font-size: (55px / $tinywidth) * 100vw;
+    font-size: math.div(55px,$tinywidth) * 100vw;
   }
   .feature-item .right-content a.text-button,
   .feature-item .right-content p {

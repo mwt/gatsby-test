@@ -18,7 +18,7 @@ export default function ComponentNav({ children }) {
                 <Navbar.Toggle aria-controls="navbarNavDropdown" />
                 <Navbar.Collapse id="navbarNavDropdown">
                     <Nav className="ms-auto">
-                        <Nav.Link href="#top" className="active">Home</Nav.Link>
+                        <Nav.Link href="#top">Home</Nav.Link>
                         <Nav.Link href="#subjects">Subjects</Nav.Link>
                         <Nav.Link href="#about">About</Nav.Link>
                         <Nav.Link href="#contact-us" className="btn btn-primary" role="button">Contact Us</Nav.Link>
